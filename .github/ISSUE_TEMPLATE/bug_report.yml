@@ -1,0 +1,79 @@
+name: Informe de errores
+description: Crea un informe de errores para ayudarnos a mejorar.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por tomarse el tiempo de rellenar un informe de error. Recuerde rellenar todos los campos, incluido el título. 
+        Los temas que no tengan la información necesaria, se pedirá que se complete la misma. 
+        Hasta que no se cuente con toda la información, el asunto no se revisara.
+  - type: textarea
+    id: current
+    attributes:
+      label: Comportamiento actual
+      description: |
+        Describa aquí el problema o la cuestión.
+        Incluye entradas de criaturas / objetos / misiones / hechizos, etc.
+        Si se trata de un fallo, publica el crashlog (súbelo a https://gist.github.com/) e incluye el enlace aquí.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamiento esperado de Blizzlike
+      description: |
+        Díganos qué debería pasar en su lugar.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Fuente
+      description: |
+        Si tienes una fuente que demuestre cómo se supone que funciona, por favor, añádela para facilitar a los desarrolladores la solución del problema.
+    validations:
+      required: false
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Pasos para reproducir el problema
+      description: |
+        ¿Qué tiene que hacer alguien más para encontrarse con el mismo fallo?
+      placeholder: |
+        1. Paso 1
+        2. Paso 2
+        3. Paso 3
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Notas adicionales
+      description: |
+        ¿Tiene alguna nota extra que pueda ayudar a resolver el problema y que no encaje en ningún otro campo?
+      placeholder: |
+        Ninguno
+    validations:
+      required: false
+  - type: textarea
+    id: commit
+    attributes:
+      label: TC rev. hash/commit
+      description: |
+        Copia el resultado del comando `.server info` (si necesitas ejecutarlo desde el cliente consigue un addon prat)
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Sistema operativo
+      description: |
+        Sistema operativo, es decir, Windows 10 x64, Debian 10 x64, etc.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your contribution.
+        This template was taken from the AzerothCore community.
+        - Test our fixes: https://www.azerothcore.org/
